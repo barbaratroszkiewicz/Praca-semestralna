@@ -1,0 +1,23 @@
+class DictEntry:
+    def __init__(self):
+        self.given_name = input("Podaj imię:")
+        self.family_name = input("Podaj nazwisko:")
+        self.date_of_birth = input("Podaj datę urodzin:")
+        self.place_of_birth = input("Podaj miejsce urodzenia:")
+        self.fav_books = []
+        while True:
+            tmp = input("Podaj ulubioną książkę:")
+            if tmp == "q":
+                break
+            else:
+                self.fav_books.append(tmp)
+                
+    def print_entry(self):
+        print("Imię i nazwisko:" + self.given_name + " " + self.family_name)
+        print("Data urodzenia:" + self.date_of_birth)
+        print("Miejsce urodzenia:" + self.place_of_birth)
+        print("Ulubione książki:", end=" ")
+        print(self.fav_books)
+        
+x = DictEntry()
+x.print_entry()
